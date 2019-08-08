@@ -183,7 +183,7 @@ ul.header-dropmenu li:hover ul li:hover {
 .ranking-d {
   display: inline-block;
   width: 45%;
-  margin: 5px;
+  margin: 10px;
 }
 
 .ranking-img-1,
@@ -204,4 +204,5 @@ ul.header-dropmenu li:hover ul li:hover {
   text-align: left;
   margin: -8px auto;
   width: 95%;
+  height: 100px;
 }
