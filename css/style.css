@@ -25,7 +25,6 @@
 img {
   width: 100px;
   height: 100px;
-  margin: 5% 0;
 }
 
 form.search {
@@ -91,7 +90,7 @@ ul.header-dropmenu > li {
   position: relative;
   display: table-cell;
   vertical-align: middle;
-  border: 1px solid #494949;
+  /* border: 1px solid #494949; */
   background: #eba3d1; /* 背景色*/
 }
 ul.header-dropmenu li a {
@@ -138,12 +137,17 @@ ul.header-dropmenu li:hover ul li:hover {
 
 
 #campaign {
-  background-color: #e91e63;
-  width: 1024px;
-  margin: 40px auto;
+  margin: 5% 0 0 0;
+  width: 100%;
 }
 
-.campaign-d {
+.center { margin: 0 0 10px;}
+.center img { width: 100%; height: auto;}
+.center .slick-next { right: 15px; z-index: 99;}
+.center .slick-prev { left: 15px; z-index: 100;}
+
+/*slickを使用したので不要。4分割のcss
+ .campaign-d {
   display: inline-block;
   width: 45%;
 }
@@ -154,40 +158,50 @@ ul.header-dropmenu li:hover ul li:hover {
 .campaign-img-4 {
   width: 90%;
   height: 90%;
-}
+} */
 
 
 
 #infomation {
   background-color: #e91e63;
-  width: 1024px;
-  margin: 10px auto;
+  width: 80%;
+  margin: 50px auto;
   padding: 0 22px;
 }
 
 #rankingbody {
   background-color: #e91e63;
-  width: 1024px;
-  margin: 10px auto;
+  width: 80%;
+  margin: 0 auto;
   padding: 0 22px;
 }
 
+.ranking-btn {
+  text-align: right;
+}
 
+.ranking-d {
+  display: inline-block;
+  width: 45%;
+  margin: 5px;
+}
 
+.ranking-img-1,
+.ranking-img-2,
+.ranking-img-3,
+.ranking-img-4 {
+  width: 95%;
+  height: 95%;
+}
 
+.txt-container {
+  background-color: #fff;
+  width: 95%;
+}
 
-
-
-
-
-.center { margin: 0 0 50px;}
-.center img { width: 100%; height: auto;}
-.center .slick-next { right: 20px; z-index: 99;}
-.center .slick-prev { left: 15px; z-index: 100;}
-
-
-
-
-
-
-
+.ranking-d p {
+  background-color: #fff;
+  text-align: left;
+  margin: -8px auto;
+  width: 95%;
+}
