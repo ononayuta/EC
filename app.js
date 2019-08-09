@@ -86,8 +86,8 @@ passport.use(new LocalStrategy(
 
 
 app.get('/', ec.index);
-
-
+app.get('/items', ec.items); //itemをIDに変更する★
+app.get('/items/:id', ec.show); //itemをIDに変更する★
 
 
 

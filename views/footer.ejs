@@ -8,15 +8,29 @@ $('.center').slick({
   centerMode: true, //要素を中央寄せ
   centerPadding:'35%', //両サイドの見えている部分のサイズ。この値を修正すると画像のサイズも必然的に変わる
   autoplay:true, //自動再生
-  
+
   //以下を入れるとスライドがすーーっと動く
   // autoplaySpeed: 0,
   // cssEase: 'linear',
   // speed: 10000
-
 });
+
+$('.thumbnail').slick({
+  infinite: true, //スライドのループ有効化
+  arrows: false, //矢印非表示
+  fade: true, //フェードの有効化
+  draggable: false //ドラッグ操作の無効化
+});
+$('.thumbnail-thumb').slick({
+  infinite: true, //スライドのループ有効化
+  slidesToShow: 8, //表示するスライドの数
+  focusOnSelect: true, //フォーカスの有効化
+  asNavFor: '.thumbnail', //thumbnailクラスのナビゲーション
+});
+
+
 </script>
 
-
-</body>
+    </div>
+  </body>
 </html>

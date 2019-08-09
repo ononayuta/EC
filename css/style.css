@@ -2,8 +2,8 @@
   font-family: serif;
   padding: 10px;
   text-align: center;
-  margin: 150px 0 0 0; /*ヘッダー分の余白のため*/
- }
+  margin: 2% 0 0 0;
+}
 
  #header {
   margin: 0 auto 50px;
@@ -22,9 +22,10 @@
   vertical-align: top;
 }
 
-img {
+.logo-btn img {
   width: 100px;
   height: 100px;
+  border-radius: 10px;
 }
 
 form.search {
@@ -46,12 +47,12 @@ form.search {
 
 .login-body {
   display: inline-block;
-  width: 10%;
+  width: 23%;
   vertical-align: top;
 }
 
 .login-btn {
-  font-size: 10px;
+  font-size: auto;
   text-align: center;
   width: auto;
   height: auto;
@@ -170,7 +171,7 @@ ul.header-dropmenu li:hover ul li:hover {
 }
 
 #rankingbody {
-  background-color: #e91e63;
+  background-color: #fff;
   width: 80%;
   margin: 0 auto;
   padding: 0 22px;
@@ -206,3 +207,87 @@ ul.header-dropmenu li:hover ul li:hover {
   width: 95%;
   height: 100px;
 }
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーー
+ ここからitemsのcss 
+　ーーーーーーーーーーーーーーーーーーーーーーー */
+
+
+#items-list-body {
+  background-color: #fff;
+  width: 80%;
+  margin: 8% auto;
+  padding: 0 22px;
+}
+
+.items-list-btn {
+  text-align: right;
+}
+
+.item-d {
+  display: inline-block;
+  width: 27%;
+  margin: 10px;
+  padding: 5px 0; 
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgb(141, 141, 141);
+}
+
+.item-img {
+  width: 90%;
+  height: 90%;
+}
+
+p {
+  height: 150px;
+}
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーー
+ ここからshowのcss 
+　ーーーーーーーーーーーーーーーーーーーーーーー */
+
+.show-body {
+  margin: 15% 0 0 0;
+}
+
+.items-img {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  /* vertical-align: middle; */
+}
+
+.item-infomation {
+  display: inline-block;
+  width : 45%;
+}
+
+.item-details {
+
+}
+
+.item-details h2 {
+  text-decoration: underline;
+}
+
+.item-buy {
+
+}
+
+.item-buy-head h3{
+  background-color: rgb(80, 80, 80);
+}
+
+.thumbnail { max-width: 600px; margin: 0 auto 5px; padding: 0;}
+.thumbnail img,.thumbnail-thumb img{ width: 100%;}
+.thumbnail-thumb { max-width: 600px; margin: 0 auto;}
+.thumbnail-thumb li { margin: 5px;}
+.thumbnial-thumb .slick-next { right: 20px; z-index: 100;}
+.thumbnail-thumb .slick-prev { left: 15px; z-index: 100;}
+.thumbnail-thumb .slick-current { opacity: 0.5;}
+.thumbnail-thumb div { cursor: pointer;}
+
+

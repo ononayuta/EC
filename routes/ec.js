@@ -1,5 +1,11 @@
 exports.index = (req, res) => {
-        console.log("aiueo")
         res.render('me/index')
 };
 
+exports.items = (req, res) => {
+        res.render('me/items')
+}
+
+exports.show = (req, res) => {
+        res.render('me/show')
+}
