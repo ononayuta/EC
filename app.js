@@ -20,77 +20,76 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
-//CSRF対策
-var cookieParser = require("cookie-parser");
-var session = require("express-session");
-var csurf = require("csurf");
+// //CSRF対策
+// var cookieParser = require("cookie-parser");
+// var session = require("express-session");
+// var csurf = require("csurf");
 
-//クッキー
-app.use(cookieParser());
+// //クッキー
+// app.use(cookieParser());
 
-//セッション管理
-app.use(session({
-  secret: "12345678", //任意の文字列
-  resave: false,
-  saveUninitialized: false
-}));
+// //セッション管理
+// app.use(session({
+//   secret: "12345678", //任意の文字列
+//   resave: false,
+//   saveUninitialized: false
+// }));
 
-//passportとexpress-sessionを読み込む(login)
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
-//サインインのページへの遷移ルート作り
-var signinRouter =require("./routes/signin");
+// //passportとexpress-sessionを読み込む(login)
+// var passport = require('passport');
+// var LocalStrategy = require('passport-local').Strategy;
+// //サインインのページへの遷移ルート作り
+// var signinRouter =require("./routes/signin");
 
-//csrf
-app.use(csurf({ cookie: true }));
+// //csrf
+// app.use(csurf({ cookie: true }));
 
-//mysqlとのコネクション
-var mysql = require('mysql');
-global.connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'ono',
-  password: 'password',
-  database: 'diary_dev'
-});
+// //mysqlとのコネクション
+// var mysql = require('mysql');
+// global.connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'ono',
+//   password: 'password',
+//   database: 'diary_dev'
+// });
 
-// session, passport.initialize, passport.sessionは以下の順番で追加
-app.use(passport.initialize());
-app.use(passport.session());
-// authentication
-// ログイン成功後指定されたオブジェクトをシリアライズして保存する際の
-// シリアライズ処理をフックするもの
-passport.serializeUser(function(users, done) {
- console.log('serializeUser');
- done(null, users);
-});
+// // session, passport.initialize, passport.sessionは以下の順番で追加
+// app.use(passport.initialize());
+// app.use(passport.session());
+// // authentication
+// // ログイン成功後指定されたオブジェクトをシリアライズして保存する際の
+// // シリアライズ処理をフックするもの
+// passport.serializeUser(function(users, done) {
+//  console.log('serializeUser');
+//  done(null, users);
+// });
 
-passport.deserializeUser(function(users, done) {
- console.log('deserializeUser');
- done(null, {current_user: users[0]});
-});
+// passport.deserializeUser(function(users, done) {
+//  console.log('deserializeUser');
+//  done(null, {current_user: users[0]});
+// });
 
-// localStrategy：ユーザIDとパスワードを用いた認証の実装部分
-passport.use(new LocalStrategy(
- function(username, password, done) {
-   connection.query("select * from users where name = ? AND password = ?;",
-     [username, password],
-     (err, users) => {
-       if (users) {
-         return done(null, users);
-       }
-       return done(null, false, {message: "invalid"});
-     }
-   );
- }
-));
+// // localStrategy：ユーザIDとパスワードを用いた認証の実装部分
+// passport.use(new LocalStrategy(
+//  function(username, password, done) {
+//    connection.query("select * from users where name = ? AND password = ?;",
+//      [username, password],
+//      (err, users) => {
+//        if (users) {
+//          return done(null, users);
+//        }
+//        return done(null, false, {message: "invalid"});
+//      }
+//    );
+//  }
+// ));
 
 
 app.get('/', ec.index);
 app.get('/items', ec.items); //itemをIDに変更する★
 app.get('/items/:id', ec.show); //itemをIDに変更する★
-
-
-
+app.post('/cart', ec.addcart) //カートへ入れるからカートへ遷移した場合
+// app.get('/cart' ,ec.cart) //カートボタンからカートへ遷移した場合
 
 
 

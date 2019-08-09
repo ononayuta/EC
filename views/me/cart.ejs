@@ -1,0 +1,43 @@
+<% include ../header %>
+<div class="cart-body">
+  <div class="cart-content">
+    <div class="cart-item">
+      <div class="cart-items-img">
+        <a href="items/商品ID">
+          <img src="../img/front/index/sample_campa2.jpg" class="cart-item-img">
+        </a>
+      </div>
+      <div class="cart-item-infomation">
+        <div class="cart-item-details">
+          <p class="cart-item-title">商品タイトル</p>
+          <br><p>商品説明　DBから商品情報を取得するよおいしいよおよおおおおおおおおおおおおおおおおおおおおおお</p>
+        </div>
+      </div>
+    </div>
+    <div class="cart-retailprice">
+      <nobr>価格：</nobr>
+      <nobr class="cart-price">650円</nobr> <!--値段をDBから取得する-->
+      <nobr>（税込み）</nobr>
+    </div>
+    <div class="cart-items-select">
+      <nobr>数量：</nobr>
+      <nobr class="cart-item-select">5</nobr> <!--値段をDBから取得する-->
+      <nobr> 個</nobr>
+    </div>
+    <div class="cart-delete-btn">
+      <form method="POST" action="">
+        <input type="submit" name="delete-btn" value="削除">
+      </form>
+    </div>
+  </div>
+</div>
+  
+
+
+
+
+  
+<% include ../footer %>
+
+
+

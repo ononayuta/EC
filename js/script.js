@@ -1,3 +1,4 @@
+
 $('.center').slick({
   infinite: true, //スライドのループ有効化
   dots:true, //ドットのナビゲーションを表示

@@ -1,36 +1,55 @@
 <% include ../header %>
 <div class="show-body">
   <div class="items-img">
-
-      <div class="thumbnail">
-          <div><img src="../img/front/show/sample_show1.jpg" alt=""></div>
-          <div><img src="../img/front/show/sample_show2.jpg" alt=""></div>
-          <div><img src="../img/front/show/sample_show3.jpg" alt=""></div>
-          <div><img src="../img/front/show/sample_show4.jpg" alt=""></div>
-        </div>
-      <div class="thumbnail-thumb">
-          <div><img src="../img/front/show/sample_show1.jpg" alt=""></div>
-          <div><img src="../img/front/show/sample_show2.jpg" alt=""></div>
-          <div><img src="../img/front/show/sample_show3.jpg" alt=""></div>
-          <div><img src="../img/front/show/sample_show4.jpg" alt=""></div>
-      </div>
-    
-
-
-
+    <div class="thumbnail">
+      <div><img src="../img/front/show/sample_show1.jpg" alt=""></div>
+      <div><img src="../img/front/show/sample_show2.jpg" alt=""></div>
+      <div><img src="../img/front/show/sample_show3.jpg" alt=""></div>
+      <div><img src="../img/front/show/sample_show4.jpg" alt=""></div>
+    </div>
+    <div class="thumbnail-thumb">
+      <div><img src="../img/front/show/sample_show1.jpg" alt=""></div>
+      <div><img src="../img/front/show/sample_show2.jpg" alt=""></div>
+      <div><img src="../img/front/show/sample_show3.jpg" alt=""></div>
+      <div><img src="../img/front/show/sample_show4.jpg" alt=""></div>
+    </div>
   </div>
   <div class="item-infomation">
-  <div class="item-details">
-    <h2>商品タイトル　DBから商品情報を取得するよ</h2>
-    <p>商品説明　DBから商品情報を取得するよ</p>
-  </div>
-  <div class="item-buy">
-    <div class="item-buy-head">
-      <h3>商品情報</h3>
+    <div class="item-details">
+      <h2>商品タイトル　DBから商品情報を取得するよ</h2>
+      <br><p>商品説明　DBから商品情報を取得するよ</p>  
+        <div class="item-buy-head">
+          <h3>商品情報</h3>
+        </div>
+        <div class="retailprice">
+          <nobr>通常価格：</nobr>
+          <nobr class="price">650円</nobr> <!--値段をDBから取得する-->
+          <nobr>（税込み）</nobr>
+        </div>
+        <div class="item-buy">
+          <form method="POST" action="/cart">
+            <div class="quantity">
+              数量
+              <select name="quantity" id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          <div class="cart-btn">
+            <input type="submit" name="button" value="カートに入れる">
+          </div>
+        </form>   
+      </div>
     </div>
   </div>
 </div>
-</div>
-
 
 <% include ../footer %>
