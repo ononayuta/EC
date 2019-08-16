@@ -1,0 +1,41 @@
+<% include ../../layout/admin_header %>
+<h1>ユーザ編集</h1>
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-body user_card">
+      <form>
+        <div class="group">
+          <input type="text"  value="<%= name %>" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>名前</label>
+        </div>
+        <div class="group">
+          <input type="text" value="<%= address %>" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>住所</label>
+        </div>
+        <div class="group">
+          <input type="text" value="<%= tel %>" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>電話番号</label>
+        </div>
+        <div class="group">
+          <input type="text" value="<%= mail %>" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>メールアドレス</label>
+        </div>
+        <div class="group">
+          <input type="password" value="qwertyuio" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>パスワード</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<% include ../../layout/admin_footer %>

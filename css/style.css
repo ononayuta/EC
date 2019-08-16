@@ -5,7 +5,7 @@
   margin: 2% 0 0 0;
 }
 
- #header {
+#header {
   margin: 0 auto 50px;
   background-color: rgb(255, 239, 248);
   font-size: 30px;
@@ -14,6 +14,7 @@
   left: 0px;                  /* 位置(右0px) */
   width: 100%;                /* 横幅100%　*/
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 }
 
 .logo-btn {

@@ -8,6 +8,8 @@ app.set('views', __dirname + '/views'); //テンプレートがどこにある�
 app.set('view engine', 'ejs'); //どのテンプレートエンジンを使用するか指定する
 //リンクはってる
 const ec = require('./routes/ec')
+const admin = require('./routes/admin/admin')
+const users = require('./routes/admin/users')
 
 //以下の3行はbodyparserを使うときに記載する
 const bodyParser = require('body-parser')
@@ -90,6 +92,12 @@ app.get('/items', ec.items); //itemをIDに変更する★
 app.get('/items/:id', ec.show); //itemをIDに変更する★
 app.post('/cart', ec.addcart) //カートへ入れるからカートへ遷移した場合
 // app.get('/cart' ,ec.cart) //カートボタンからカートへ遷移した場合
+app.get('/admin/home', admin.home)
+app.get('/admin/users', users.index)
+app.get('/admin/users/show/:id', users.show)
+app.get('/admin/users/new', users.new)
+app.get('/admin/users/:id/edit', users.edit)
+
 
 
 
