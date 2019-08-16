@@ -1,0 +1,54 @@
+nav{
+  background-color: #333;
+}
+
+nav a{
+  color: #757575;
+}
+
+nav a:hover {
+  color: #e0e0e0;
+}
+
+.navbar-brand {
+  padding: .5rem 1rem;
+  color: #fff;
+}
+
+.container {
+  margin-top: 3%;
+  font-family: serif;
+  padding: 10px;
+  text-align: center;
+}
+
+#header {
+  margin: 0 auto 50px;
+  background-color: rgb(255, 239, 248);
+  font-size: 1.25rem;
+  position: fixed;            /* ヘッダーの固定 */
+  top: 0px;                   /* 位置(上0px) */
+  left: 0px;                  /* 位置(右0px) */
+  width: 100%;                /* 横幅100%　*/
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+
+.card {
+  box-shadow: 0 1px 3px rgba(106,137,152,0.2);
+  margin: 5% 0;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 34px;
+  box-shadow: 0 0 15px 1px rgba(133,140,142,0.3);
+}
+
+.card-body img{
+  width: 35%;
+  margin: 5% auto;
+}
