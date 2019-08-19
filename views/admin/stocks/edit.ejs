@@ -1,0 +1,47 @@
+<% include ../../layout/admin_header %>
+<h1>ユーザ編集</h1>
+<div class="col-sm-12">
+  <div class="card">
+    <div class="row card-body product_card">
+      <div class="col-sm-4">
+        <div class="">
+          <img src="../../../img/front/show/sample_show2.jpg" alt="sample_show2.jpg">
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="">
+          <table>
+            <tr>
+              <th>カテゴリ名</th>
+              <td>カテゴリーA</td>
+            </tr>
+            <tr>
+              <th>商品名</th>
+              <td>商品A</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <form>
+      <div class="row card-body product_card">
+        <div class="col-6">
+          <input type="text" disabled value="100個">
+        </div>
+        <div class="col-6">
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>正常数</label>
+        </div>
+      </div>
+      <p class="btn_wrap">
+        <a href="/admin/products/" class="btn btn-secondary">戻る</a>
+      </p>
+      <p class="btn_wrap">
+        <input class="btn btn-success" type="button" value="編集">
+      </p>
+    </form>
+  </div>
+</div>
+<% include ../../layout/admin_footer %>

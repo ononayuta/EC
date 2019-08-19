@@ -1,0 +1,71 @@
+<% include ../../layout/admin_header %>
+<h1>ユーザ編集</h1>
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-body user_card">
+      <form>
+        <div class="card-body product_card">
+          <div class="group">
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>商品カテゴリー</label>
+          </div>
+          <div class="group">
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>商品名</label>
+          </div>
+          <div class="group">
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>商品詳細</label>
+          </div>
+        </div>
+        <div class="row card-body product_card">
+          <div class="col-6">
+            <p>
+              <img src="#" alt="" class="img-print" id="print_img" style="width:100%; display: none;">
+            </p>
+            <div class="file-wrap">
+              <input type="file" name="image_file" id="file-image" class="file">
+            </div>
+          </div>
+          <div class="col-6">
+            <p>
+              <img src="#" alt="" class="img-print" id="print_img_2" style="width:100%; display: none;">
+            </p>
+            <div class="file-wrap">
+              <input type="file" name="image_file_2" id="file-image_2" class="file">
+            </div>
+          </div>
+          <div class="col-6">
+            <p>
+              <img src="#" alt="" class="img-print" id="print_img_3" style="width:100%; display: none;">
+            </p>
+            <div class="file-wrap">
+              <input type="file" name="image_file_3" id="file-image_3" class="file">
+            </div>
+          </div>
+          <div class="col-6">
+            <p>
+              <img src="#" alt="" class="img-print" id="print_img_4" style="width:100%; display: none;">
+            </p>
+            <div class="file-wrap">
+              <input type="file" name="image_file_4" id="file-image_4" class="file">
+            </div>
+          </div>
+        </div>
+        <p class="btn_wrap">
+          <a href="/admin/products/" class="btn btn-secondary">戻る</a>
+        </p>
+        <p class="btn_wrap">
+          <input class="btn btn-success" type="button" value="編集">
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+<% include ../../layout/admin_footer %>

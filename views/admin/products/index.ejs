@@ -1,0 +1,38 @@
+<% include ../../layout/admin_header %>
+
+<h1>商品一覧画面</h1>
+<div class="btn_wrap">
+  <a href="/admin/products/new" class="btn btn-primary right_btn">商品新規登録</a>
+</div>
+<div class="table-responsive-vertical shadow-z-1">
+  <table id="table" class="table table-hover table-mc-light-blue">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>商品カテゴリー</th>
+        <th>商品名</th>
+        <th>編集</th>
+        <th>削除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="id">1</td>
+        <td class="product_category">
+          カテゴリーA
+        </td>
+        <td class="product_name">
+            <a href="/admin/products/show/1">商品A</a>
+        </td>
+        <td class="edit">
+          <a href="/admin/products/1/edit">編集</a>
+        </td>
+        <td class="delete">
+            <a href="#">削除</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<% include ../../layout/admin_footer %>
