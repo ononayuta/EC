@@ -12,6 +12,7 @@ const admin = require('./routes/admin/admin')
 const users = require('./routes/admin/users')
 const products = require('./routes/admin/products')
 const stocks = require('./routes/admin/stocks')
+const sales = require('./routes/admin/sales')
 
 //以下の3行はbodyparserを使うときに記載する
 const bodyParser = require('body-parser')
@@ -109,6 +110,11 @@ app.get('/admin/products/:id/edit', products.edit)
 // 在庫管理画面
 app.get('/admin/stocks', stocks.index)
 app.get('/admin/stocks/:id/edit', stocks.edit)
+// 売上管理画面
+app.get('/admin/sales', sales.index)
+app.get('/admin/sales/show/:id', sales.show)
+app.get('/admin/sales/new', sales.new)
+app.get('/admin/sales/:id/edit', sales.edit)
 
 
 
