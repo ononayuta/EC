@@ -94,6 +94,12 @@ app.get('/items', ec.items); //itemをIDに変更する★
 app.get('/items/:id', ec.show); //itemをIDに変更する★
 app.post('/cart', ec.addcart) //カートへ入れるからカートへ遷移した場合
 // app.get('/cart' ,ec.cart) //カートボタンからカートへ遷移した場合
+
+// フロントのマイページ
+app.get('/mypage/top', ec.mypage_t);
+app.get('/mypage/account', ec.account);
+app.get('/mypage/delivery', ec.delivery);
+app.get('/mypage/order', ec.order);
 // 管理者画面
 app.get('/admin/home', admin.home)
 // ユーザ管理画面
@@ -109,8 +115,6 @@ app.get('/admin/products/:id/edit', products.edit)
 // 在庫管理画面
 app.get('/admin/stocks', stocks.index)
 app.get('/admin/stocks/:id/edit', stocks.edit)
-
-//featureに反映させよー
 
 
 
