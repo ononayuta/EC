@@ -110,7 +110,7 @@ app.get('/admin/products/:id/edit', products.edit)
 app.get('/admin/stocks', stocks.index)
 app.get('/admin/stocks/:id/edit', stocks.edit)
 
-
+//featureに反映させよー
 
 
 
