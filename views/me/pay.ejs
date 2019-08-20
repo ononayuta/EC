@@ -2,40 +2,6 @@
 <div id="order-body">
   <section class="section">
     <div class="order-info">
-      <h2>お届け内容の確認</h2>
-      <div class="order-info-title">
-        <h2>お届け先</h2>
-        <table class="tabel-body">
-          <tbody>
-            <tr>
-              <th>お名前</th>
-              <td>
-                DBから取得した名前を表示する
-              </td>
-            </tr>
-            <tr>
-              <th>お名前フリガナ</th>
-              <td>
-                DBから取得したフリガナを表示する
-              </td>
-            </tr>
-            <tr>
-              <th>郵便番号</th>
-              <td>
-                DBから取得した郵便番号を表示する
-              </td>
-            </tr>
-            <tr>
-              <th>住所</th>
-              <td>
-                DBから取得した住所を表示する
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="order-info">
       <h2>ご注文内容の確認</h2>
       <div class="order-info-title">
         <h2>商品</h2>
@@ -60,18 +26,24 @@
             <nobr class="cart-item-select">5</nobr> <!--値段をDBから取得する-->
             <nobr> 個</nobr>
           </div>
+          <div class="cart-items-select">
+            <nobr>合計金額：</nobr>
+            <nobr class="cart-item-allprice">5</nobr> <!--値段をDBから取得する-->
+            <nobr> 円</nobr>
+          </div>
+  
         </div>
       </div>
-      <a class="back-btn-img" href="/cart">
+      <a class="back-btn-img" href="/order">
         <div class="back-btn">
-          <p>戻る</p>
-        </div>
-      </a>
-      <a class="order-next-btn-img" href="/order/pay">
-        <div class="order-next-btn">
-          <p>次へ</p> 
+          <p>戻る</p> 
         </div>
       </a>  
+      <a class="order-next-btn-img" href="/order/confirm">
+        <div class="order-next-btn">
+          <p>注文確定</p>
+        </div>
+      </a>   
     </section>
   </div>
 <% include ../footer %>

@@ -328,13 +328,21 @@ nobr.price {
 }
 
 .cart-content {
-  width: 100%;
+  width: 80%;
+  margin: auto;
   text-align: center;
+  border: 1px solid #7c7878;
+  border-collapse: separate;
+  border-spacing: 1px;
+  border-radius: 6px;
+
+
+
 }
 
 .cart-item {
   display: inline-block;
-  width: 30%;
+  width: 40%;
   vertical-align: top;
   text-align: center;
 }
@@ -375,7 +383,10 @@ nobr.price {
   display: inline-block;
   text-align: center;
   width:20%;
-  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .cart-retailprice nobr {
@@ -390,8 +401,11 @@ nobr.cart-price {
 .cart-items-select {
   display: inline-block;
   text-align: center;
-  width:20%;
-  height: 100%;
+  width:20%; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .cart-items-select nobr {
@@ -406,6 +420,10 @@ nobr.cart-item-select {
 .cart-delete-btn {
   display: inline-block;
   width: 10%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .cart-delete-btn input {
@@ -479,18 +497,19 @@ display: block;
 .basic-title {
 margin: 20px;
 padding: 15px;
+border-radius: 6px;
 box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 }
 
 .basic-title h2 {
 text-align: left;
-border-bottom: 1px dotted #d0d0d0; 
+border-bottom: 1px dotted #e97676; 
 }
 
 .tabel-body {
-width: 100%;
+  width: 100%;
   font-size: small;
-  border: 1px solid #c1c0c0;
+  border: 1px solid #7c7878;
   border-collapse: separate;
   border-spacing: 1px;
   border-radius: 6px;
@@ -501,8 +520,9 @@ width: 30%;
 min-width: 300px;
 vertical-align: top;
 padding: 5px 0 5px 15px;
-border-right: 1px solid #8c8c8c;
-border-bottom: 1px dotted #8c8c8c;
+background-color: #f1c7e2;
+border-right: 1px solid #3f3d3d;
+border-bottom: 1px dotted #3f3d3d;
 text-align: left;
 }
 
@@ -511,4 +531,196 @@ width: 70%;
 padding: 5px;
 border-bottom: 1px dotted #8c8c8c;
 text-align: left;
+}
+
+.edit-btn {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 12px;   /* 余白       */
+    background    : #f15050;     /* 背景色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    opacity       : 0.9;         /* 透明度     */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 2px 2px 1px #666666;  /* 影の設定 */
+  }
+  .edit-btn:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    opacity       : 1;           /* カーソル時透明度 */
+  }
+  .edit-btn-img {
+    font-size: 15px;
+    color: #ffffff;
+  }
+
+
+    /*ーーーーーーーーーーーーーーーーーーーーーーー
+ ここからorderのcss 
+　ーーーーーーーーーーーーーーーーーーーーーーー */
+  .buy-btn {
+    margin: 10px;
+    width: 200px;
+    position: absolute;
+    right: 10%;
+    border-radius : 5%;          /* 角丸       */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 0;   /* 余白       */
+    background    : #f15050;     /* 背景色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    opacity       : 0.9;         /* 透明度     */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 2px 2px 1px #666666;  /* 影の設定 */
+  }
+  .buy-btn:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    opacity       : 1;           /* カーソル時透明度 */
+  }
+  .buy-btn-img {
+    font-size: 15px;
+    color: #ffffff;
+  }
+
+  .order-body {
+    width: 100%;
+    height:100%;
+    margin: 10% 0;
+    padding: 100px 0;
+    }
+    
+    .order-info {
+    max-width: 1000px;
+    margin: 7% auto 2%;
+    padding: 10px;
+    display: block;
+    }
+    
+    .order-info-title {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    }
+    
+    .order-info-title h2 {
+    text-align: left;
+    border-bottom: 1px dotted #e97676; 
+    }
+    
+    .tabel-body {
+      width: 100%;
+      font-size: small;
+      border: 1px solid #7c7878;
+      border-collapse: separate;
+      border-spacing: 1px;
+      border-radius: 6px;
+    }
+    
+    table.tabel-body th {
+    width: 30%;
+    min-width: 300px;
+    vertical-align: top;
+    padding: 5px 0 5px 15px;
+    background-color: #f1c7e2;
+    border-right: 1px solid #3f3d3d;
+    border-bottom: 1px dotted #3f3d3d;
+    text-align: left;
+    }
+    
+    table.tabel-body td {
+    width: 70%;
+    padding: 5px;
+    border-bottom: 1px dotted #8c8c8c;
+    text-align: left;
+    }
+    
+    .edit-btn,
+    .back-btn,
+    .order-next-btn {
+        display       : inline-block;
+        margin: 0 20px 100px;
+        width: 20%;
+        border-radius : 5%;          /* 角丸       */
+        text-align    : center;      /* 文字位置   */
+        cursor        : pointer;     /* カーソル   */
+        padding       : 0;   /* 余白       */
+        background    : #f15050;     /* 背景色     */
+        line-height   : 1em;         /* 1行の高さ  */
+        opacity       : 0.9;         /* 透明度     */
+        transition    : .3s;         /* なめらか変化 */
+        box-shadow    : 2px 2px 1px #666666;  /* 影の設定 */
+      }
+      .edit-btn:hover,
+      .back-btn:hover,
+      .order-next-btn:hover {
+        box-shadow    : none;        /* カーソル時の影消去 */
+        opacity       : 1;           /* カーソル時透明度 */
+      }
+      .edit-btn-img,
+      .back-btn-img,
+      .order-next-btn-img {
+        font-size: 15px;
+        color: #ffffff;
+      }
+
+      
+    /*ーーーーーーーーーーーーーーーーーーーーーーー
+ ここからmyorderのcss 
+　ーーーーーーーーーーーーーーーーーーーーーーー */
+.myorder-body {
+  margin: 15% 0 0 0;
+}
+
+.myorder-info {
+  margin: 0 10%;
+  padding: 30px;
+  background-color: rgb(255, 227, 227);
+  box-shadow: 2px 2px 1px #666666;
+}
+
+.items-img {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  /* vertical-align: middle; */
+}
+
+.item-img {
+  width: 80%;
+}
+
+.item-infomation {
+  display: inline-block;
+  width : 45%;
+  text-align: left;
+  padding: 0 0 0 20px;
+}
+
+.item-details h2 {
+  text-decoration: underline;
+}
+
+.item-buy-head p{
+  text-align: left;
+  margin: 30px 0 0 0;
+  background-color: rgb(155, 153, 153);
+}
+
+.price-body {
+  width: 100%;
+}
+
+
+.retailprice {
+  text-align: left;
+}
+
+.retailprice nobr {
+  font-size: 20px;
+  font-family: cursive;
+}
+
+nobr.price {
+  font-size: 30px;
 }

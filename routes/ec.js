@@ -28,6 +28,10 @@ exports.addcart = (req, res) => {
         res.render('me/cart')
 }
 
+exports.cart = (req, res) => {
+        res.render('me/cart')
+}
+
 exports.mypage_t = (req, res) => {
         res.render('me/mypage_t')
 }
@@ -42,4 +46,16 @@ exports.delivery = (req, res) => {
 
 exports.order = (req, res) => {
         res.render('me/order')
+}
+
+exports.pay = (req, res) => {
+        res.render('me/pay')
+}
+
+exports.myorder = (req, res) => {
+        res.render('me/myorder')
+}
+
+exports.confirm = (req, res) => {
+        res.render('me/confirm')
 }
