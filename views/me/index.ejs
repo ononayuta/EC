@@ -20,14 +20,21 @@
   </div>
   <div id=rankingbody class="ranking-body">
     <a href="/items"class=ranking-btn> すべての商品 </a>
+
     <div id=ranking class="ranking">
+    <% items.forEach(item => { %>
       <div class="ranking-d">
-        <a href="/items/:id" class="ranking1">
+        <a href="/items/<%=item.id%>" class="ranking1">
           <img src="../img/front/index/sample_campa1.jpg" class="ranking-img-1">
+                  <!-- CSRF対策-->
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
         </a>
-        <br><p>説明文だよー1</p>
+        <h2><%= item.product_name %></h2>
+        <p><%= item.product_description %></p>
       </div>
-      <div class="ranking-d">
+    <% }); %>
+    </div>
+      <!-- <div class="ranking-d">
         <a href="/items/:id" class="ranking2">
           <img src="../img/front/index/sample_campa2.jpg" class="ranking-img-2">
         </a>
@@ -44,8 +51,7 @@
           <img src="../img/front/index/sample_campa4.jpg" class="ranking-img-4">
         </a>
         <br><p>説明文だよー4</p>
-      </div>
-    </div>
+      </div> -->
   </div>
 </div>
 
