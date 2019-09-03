@@ -4,14 +4,9 @@
 
   <div id=campaign class="campaign-body">
     <div class="center">
-      <div><a href="#"><img src="../img/front/index/sample_campa1.jpg"></a></div>
-      <div><a href="#"><img src="../img/front/index/sample_campa2.jpg"></a></div>
-      <div><a href="#"><img src="../img/front/index/sample_campa3.jpg"></a></div>
-      <div><a href="#"><img src="../img/front/index/sample_campa4.jpg"></a></div>
-      <div><a href="#"><img src="../img/front/index/sample_campa5.jpg"></a></div>
-      <div><a href="#"><img src="../img/front/index/sample_campa6.jpg"></a></div>
-      <div><a href="#"><img src="../img/front/index/sample_campa7.jpg"></a></div>
-      <div><a href="#"><img src="../img/front/index/sample_campa8.jpg"></a></div>
+        <% items.forEach(item => { %>
+      <div><a href="/items/<%=item.id%>"><img src="../img/front/index/sample_campa1.jpg"></a></div>
+      <% }); %>
     </div>
   </div>
 

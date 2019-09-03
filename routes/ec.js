@@ -12,25 +12,29 @@
 
 
 exports.index = (req, res) => {
-                connection.query('SELECT * FROM items ORDER BY RAND() LIMIT 6;',
-                  function (err, items) {
-                    console.log(req.items)
-                    res.render('me/index',{items:items, csrfToken: req.csrfToken() })
-                  }
-                )
-                }
+        connection.query('SELECT * FROM items ORDER BY RAND() LIMIT 6;',
+          function (err, items) {
+            console.log(req.items)
+            res.render('me/index',{items:items, csrfToken: req.csrfToken() })
+          }
+)}
 
 
 
 
 
 exports.items = (req, res) => {
-        res.render('me/items')
-}
+        connection.query('SELECT * FROM items;',
+        function (err, item) {
+        res.render('me/items',{item:item, csrfToken: req.csrfToken() })
+       
+})}
 
 exports.show = (req, res) => {
-        res.render('me/show')
-}
+        connection.query('SELECT * FROM items WHERE id = ?;',req.params.id,
+        function (err, show_id) {
+        res.render('me/show', {show:show_id})
+})}
 
 exports.addcart = (req, res) => {
         //insert文を書く必要あり
@@ -42,12 +46,27 @@ exports.cart = (req, res) => {
 }
 
 exports.mypage_t = (req, res) => {
-        res.render('me/mypage_t')
-}
+ if(req.user) {
+        connection.query('SELECT * FROM users WHERE id = ?;',req.user.current_user.id,
+        function (err, user) {
+        res.render('me/mypage_t', {user:user, csrfToken: req.csrfToken() })
+        })
+        }else{
+        res.redirect('/signin');
+        }
+};
 
 exports.account = (req, res) => {
-        res.render('me/account')
-}
+ if(req.user) {
+        connection.query('SELECT * FROM users WHERE id = ?;',req.user.current_user.id,
+        function (err, user) {
+        res.render('me/account', {user:user, csrfToken: req.csrfToken() })
+        })
+        }else{
+        res.redirect('/signin');
+        }
+        console.log(req)
+};
 
 exports.delivery = (req, res) => {
         res.render('me/delivery')

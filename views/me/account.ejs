@@ -1,16 +1,15 @@
 <% include ../header %>
 <div class="account-body">
   <section class="section">
-    <div class="basic">
+    <% console.log(user) %>
+        <div class="basic">
       <div class="basic-title">
         <h2>基本情報</h2>
         <table class="tabel-body">
           <tbody>
             <tr>
               <th>お名前</th>
-              <td>
-                DBから取得した名前を表示する
-              </td>
+              <td><%=user.email%></td>
             </tr>
             <tr>
               <th>お名前フリガナ</th>
@@ -57,5 +56,6 @@
       </div>  
     </div>
   </section>
+  <h3><%=user.email%></h3>
 </div>
 <% include ../footer %>

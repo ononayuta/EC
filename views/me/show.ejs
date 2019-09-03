@@ -1,5 +1,6 @@
 <% include ../header %>
 <div class="show-body">
+    <% show.forEach(show => { %>
   <div class="items-img">
     <div class="thumbnail">
       <div><img src="../img/front/show/sample_show1.jpg" alt=""></div>
@@ -16,14 +17,14 @@
   </div>
   <div class="item-infomation">
     <div class="item-details">
-      <h2>商品タイトル　DBから商品情報を取得するよ</h2>
-      <br><p>商品説明　DBから商品情報を取得するよ</p>  
+      <h2><%=show.product_name%></h2>
+      <br><p><%=show.product_description%></p>  
         <div class="item-buy-head">
           <h3>商品情報</h3>
         </div>
         <div class="retailprice">
           <nobr>通常価格：</nobr>
-          <nobr class="price">650円</nobr> <!--値段をDBから取得する-->
+          <nobr class="price"><%=show.product_price%> 円</nobr> <!--値段をDBから取得する-->
           <nobr>（税込み）</nobr>
         </div>
         <div class="item-buy">
@@ -36,7 +37,7 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-                <option value="6">6</>
+                <option value="6">6</option>
                 <option value="7">7</option>
                 <option value="8">8</option>
                 <option value="9">9</option>
@@ -50,6 +51,7 @@
       </div>
     </div>
   </div>
+  <% }); %>
 </div>
 
 <% include ../footer %>
