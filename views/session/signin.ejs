@@ -1,0 +1,11 @@
+<% include ../header %>
+<div class="signin-body">
+  <h1> ログイン画面 </h1>
+  <form method="POST" action="/signin">
+    <input type="text" name="username" class="user-text" placeholder="ユーザー名">
+    <input type="text" name="password" class="password-text" placeholder="パスワード">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <input type="submit" value='ログイン'>
+  </form>
+</div>
+<% include ../footer %>

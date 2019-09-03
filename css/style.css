@@ -183,6 +183,9 @@ ul.header-dropmenu li:hover ul li:hover {
 }
 
 .ranking-d {
+  padding: 10px;
+  background-color: rgb(252, 229, 232);
+  box-shadow: 1px 1px 3px rgb(141, 141, 141);
   display: inline-block;
   width: 45%;
   margin: 10px;
@@ -201,8 +204,16 @@ ul.header-dropmenu li:hover ul li:hover {
   width: 95%;
 }
 
+.ranking-d h2 {
+
+  text-align: left;
+  margin: -8px auto;
+  width: 95%;
+  height: 50px;
+}
+
 .ranking-d p {
-  background-color: #fff;
+
   text-align: left;
   margin: -8px auto;
   width: 95%;
@@ -723,4 +734,13 @@ text-align: left;
 
 nobr.price {
   font-size: 30px;
+}
+
+
+
+    /*ーーーーーーーーーーーーーーーーーーーーーーー
+ ここからsigninのcss 
+　ーーーーーーーーーーーーーーーーーーーーーーー */
+.signin-body {
+  margin: 15% 0 0 0;
 }

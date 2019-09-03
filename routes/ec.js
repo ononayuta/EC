@@ -12,8 +12,17 @@
 
 
 exports.index = (req, res) => {
-        res.render('me/index')
-};
+                connection.query('SELECT * FROM items ORDER BY RAND() LIMIT 6;',
+                  function (err, items) {
+                    console.log(req.items)
+                    res.render('me/index',{items:items, csrfToken: req.csrfToken() })
+                  }
+                )
+                }
+
+
+
+
 
 exports.items = (req, res) => {
         res.render('me/items')
