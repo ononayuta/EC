@@ -14,7 +14,6 @@
 exports.index = (req, res) => {
         connection.query('SELECT * FROM items ORDER BY RAND() LIMIT 6;',
           function (err, items) {
-            console.log(req.items)
             res.render('me/index',{items:items, csrfToken: req.csrfToken() })
           }
 )}
@@ -60,12 +59,11 @@ exports.account = (req, res) => {
  if(req.user) {
         connection.query('SELECT * FROM users WHERE id = ?;',req.user.current_user.id,
         function (err, user) {
-        res.render('me/account', {user:user, csrfToken: req.csrfToken() })
+        res.render('me/account', {user_a:user, csrfToken: req.csrfToken() })
         })
         }else{
         res.redirect('/signin');
         }
-        console.log(req)
 };
 
 exports.delivery = (req, res) => {
