@@ -53,7 +53,7 @@ app.use(csurf({ cookie: true }));
 var mysql = require('mysql');
 global.connection = mysql.createConnection({
   host: 'localhost',
-  user: 'ono',
+  user: 'syun',
   password: 'password',
   database: 'ec'
 });

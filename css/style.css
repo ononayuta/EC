@@ -17,53 +17,83 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 }
 
-.logo-btn {
+.logo {
+  width: 8%;
   display: inline-block;
-  width: 10%;
-  vertical-align: top;
 }
 
-.logo-btn img {
+.logo img {
   width: 100px;
-  height: 100px;
   border-radius: 10px;
-}
-
-form.search {
-  font-size: 5px;
-  display: inline-block;
-  width: 35%;
-  height:90%;
+  margin: 5% 0;
+  vertical-align: middle;
 }
 
 .search {
-  margin: 0 0; /*％指定ではなくしたい*/
+  display: inline-block;
+  vertical-align: middle;
+  width: 45%;
+  margin-left: 8%;
+  height: 50px;
+}
+
+.search input[type="search"]{
+  display: inline-block;
+	width: 80%;
+	line-height: 24px;
+	background: none;
+	padding: 8px;
+	background-color: #fff;
+  border: 1px solid #aaa;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.search input[type="submit"]{
+  display: inline-block;
+	width: 15%;
+	height: 40px;
+	color:#fff;
+	line-height: 40px;
+  text-align: center;
+  border-radius: 10px;
+	background-color: #e91e63;
+  border: 1px solid #e91e63;
+  box-shadow: 1px 1px 2px rgb(66, 66, 66);
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 2%;
 }
 
 .aicon {
   display: inline-block;
-  width: 30%;
+  vertical-align: middle;
+  padding: 1px 0 0;
+  width: 25%;
   height: 100%;
+  margin-left: 1%;
 }
 
-.login-body {
+.aicon a{
   display: inline-block;
-  width: 23%;
-  vertical-align: top;
+  vertical-align: middle;
+  margin-right: 1%;
 }
 
 .login-btn {
-  font-size: auto;
-  text-align: center;
-  width: auto;
-  height: auto;
-  border-radius: 10px;
+  display: inline-block;
+  width: 26%;
+  height: 40px;
   color: #fff;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 10px;
   background-color: #e91e63;
-  border-color: #e91e63;
-  box-shadow: 2px 2px 5px rgb(66, 66, 66);
+  border: 1px solid #e91e63;
+  box-shadow: 1px 1px 2px rgb(66, 66, 66);
+  font-size: 14px;
   text-decoration: none;
-  margin: 5% 0;
 }
 
 #menu {
@@ -73,9 +103,15 @@ form.search {
 
 .menu-img {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   text-decoration: none;
+  vertical-align: middle;
+}
+
+.home_svg{
+  width: 46px;
+  height: 46px;
 }
 
 
