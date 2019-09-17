@@ -95,12 +95,17 @@ app.get('/items', ec.items); //itemをIDに変更する★
 app.get('/items/:id', ec.show); //itemをIDに変更する★
 app.post('/cart', ec.addcart) //カートへ入れるからカートへ遷移した場合
 app.get('/cart' ,ec.cart) //カートボタンからカートへ遷移した場合
+app.delete('/cart', ec.delete);
+
 
 // フロントのマイページ
 app.get('/mypage/top', ec.mypage_t);
 app.get('/mypage/account', ec.account);
+app.get('/mypage/account/edit', ec.account_edit);
+app.put('/mypage/account', ec.update);
 app.get('/mypage/delivery', ec.delivery);
 app.get('/mypage/order', ec.myorder);
+
 //購入
 app.get('/order', ec.order);
 app.get('/order/pay', ec.pay);
