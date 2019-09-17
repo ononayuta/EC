@@ -1,0 +1,67 @@
+<% include ../header %>
+<div id="order-body">
+  <section class="section">
+    <div class="order-info">
+      <h2>お届け内容の確認</h2>
+      <div class="order-info-title">
+        <h2>お届け先</h2>
+        <table class="tabel-body">
+          <tbody>
+            <tr>
+              <th>お名前</th>
+              <td>
+                DBから取得した名前を表示する
+              </td>
+            </tr>
+            <tr>
+              <th>お名前フリガナ</th>
+              <td>
+                DBから取得したフリガナを表示する
+              </td>
+            </tr>
+            <tr>
+              <th>郵便番号</th>
+              <td>
+                DBから取得した郵便番号を表示する
+              </td>
+            </tr>
+            <tr>
+              <th>住所</th>
+              <td>
+                DBから取得した住所を表示する
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="order-info">
+      <h2>ご注文内容の確認</h2>
+      <div class="order-info-title">
+        <h2>商品</h2>
+        <div class="order-contents">
+          <div class="cart-items-img">
+                <img src="../img/front/index/sample_campa2.jpg" class="cart-item-img">
+            </div>
+            <div class="cart-item-infomation">
+              <div class="cart-item-details">
+                <p class="cart-item-title">商品タイトル</p>
+                <br><p>商品説明　DBから商品情報を取得するよおいしいよおよおおおおおおおおおおおおおおおおおおおおおお</p>
+              </div>
+            </div>
+          </div>
+          <div class="cart-retailprice">
+            <nobr>価格：</nobr>
+            <nobr class="cart-price">650円</nobr> <!--値段をDBから取得する-->
+            <nobr>（税込み）</nobr>
+          </div>
+          <div class="cart-items-select">
+            <nobr>数量：</nobr>
+            <nobr class="cart-item-select">5</nobr> <!--値段をDBから取得する-->
+            <nobr> 個</nobr>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+<% include ../footer %>

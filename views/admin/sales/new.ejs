@@ -1,0 +1,120 @@
+
+<% include ../../layout/admin_header %>
+<h1>売上新規登録画面</h1>
+
+<div class="col-sm-12">
+  <div class="card">
+    <form>
+      <div class="row card-body salse_input_wrap">
+        <div class="col-4">
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>売上日</label>
+        </div>
+        <div class="col-4">
+          <label class="input_disabled">伝票番号</label>
+          <input type="text" disabled value="000111222333">
+        </div>
+        <div class="col-4">
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>顧客名</label>
+        </div>
+      </div>
+      <div class="row card-body salse_input_wrap">
+        <div class="col-12">
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>備考</label>
+        </div>
+      </div>
+      <div class="row card-body salse_input_wrap">
+        <table id="table" class="table table-hover table-mc-light-blue">
+          <caption>売上明細 <i class="material-icons btn-primary shadow-z-1">create</i> </caption>
+          <thead>
+            <tr>
+              <th>伝票番号</th>
+              <th>カテゴリ</th>
+              <th>商品名</th>
+              <th>単価</th>
+              <th>数量</th>
+              <th>金額</th>
+              <th>納入希望日</th>
+              <th>備考</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="slip_number">
+                <input type="text" required value="000111222333">
+                <span class="bar"></span>
+              </td>
+              <td class="user_name">
+                <input type="text" required value="商品カテゴリーA">
+                <span class="bar"></span>
+              </td>
+              <td class="">
+                <input type="text" required value="タピオカA">
+                <span class="bar"></span>
+              </td>
+              <td class="unit_price price">
+                <input type="text" disabled>
+              </td>
+              <td class="quantity">
+                <input type="text" required value="">
+                <span class="bar"></span>
+              </td>
+              <td class="price">
+                <input type="text" disabled>
+              </td>
+              <td class="delivery_desired">
+                <input type="text" required value="">
+                <span class="bar"></span>
+              </td>
+              <td class="memo">
+                <input type="text" required value="">
+                <span class="bar"></span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="subtotal">
+              <td colspan="4"></td>
+              <td>小計</td>
+              <td class="price">
+                <input type="text" disabled>
+              </td>
+              <td colspan="2"></td>
+            </tr>
+            <tr class="tax_row">
+              <td colspan="4"></td>
+              <td>消費税</td>
+              <td class="price">
+                <input type="text" disabled>
+              </td>
+              <td colspan="2"></td>
+            </tr>
+            <tr class="total_row">
+              <td colspan="4"></td>
+              <td>合計</td>
+              <td class="price">
+                <input type="text" disabled>
+              </td>
+              <td colspan="2"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="btn_wrap">
+        <a href="/admin/sales/" class="btn btn-secondary">戻る</a>
+      </p>
+      <p class="btn_wrap">
+        <input class="btn btn-primary" type="button" value="登録">
+      </p>
+    </form>
+  </div>
+</div>
+<% include ../../layout/admin_footer %>

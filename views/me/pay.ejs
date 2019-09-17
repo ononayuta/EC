@@ -1,0 +1,49 @@
+<% include ../header %>
+<div id="order-body">
+  <section class="section">
+    <div class="order-info">
+      <h2>ご注文内容の確認</h2>
+      <div class="order-info-title">
+        <h2>商品</h2>
+        <div class="order-contents">
+          <div class="cart-items-img">
+                <img src="../img/front/index/sample_campa2.jpg" class="cart-item-img">
+            </div>
+            <div class="cart-item-infomation">
+              <div class="cart-item-details">
+                <p class="cart-item-title">商品タイトル</p>
+                <br><p>商品説明　DBから商品情報を取得するよおいしいよおよおおおおおおおおおおおおおおおおおおおおおお</p>
+              </div>
+            </div>
+          </div>
+          <div class="cart-retailprice">
+            <nobr>価格：</nobr>
+            <nobr class="cart-price">650円</nobr> <!--値段をDBから取得する-->
+            <nobr>（税込み）</nobr>
+          </div>
+          <div class="cart-items-select">
+            <nobr>数量：</nobr>
+            <nobr class="cart-item-select">5</nobr> <!--値段をDBから取得する-->
+            <nobr> 個</nobr>
+          </div>
+          <div class="cart-items-select">
+            <nobr>合計金額：</nobr>
+            <nobr class="cart-item-allprice">5</nobr> <!--値段をDBから取得する-->
+            <nobr> 円</nobr>
+          </div>
+  
+        </div>
+      </div>
+      <a class="back-btn-img" href="/order">
+        <div class="back-btn">
+          <p>戻る</p> 
+        </div>
+      </a>  
+      <a class="order-next-btn-img" href="/order/confirm">
+        <div class="order-next-btn">
+          <p>注文確定</p>
+        </div>
+      </a>   
+    </section>
+  </div>
+<% include ../footer %>

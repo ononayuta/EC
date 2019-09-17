@@ -12,8 +12,17 @@
 
 
 exports.index = (req, res) => {
-        res.render('me/index')
-};
+                connection.query('SELECT * FROM items ORDER BY RAND() LIMIT 6;',
+                  function (err, items) {
+                    console.log(req.items)
+                    res.render('me/index',{items:items, csrfToken: req.csrfToken() })
+                  }
+                )
+                }
+
+
+
+
 
 exports.items = (req, res) => {
         res.render('me/items')
@@ -28,3 +37,34 @@ exports.addcart = (req, res) => {
         res.render('me/cart')
 }
 
+exports.cart = (req, res) => {
+        res.render('me/cart')
+}
+
+exports.mypage_t = (req, res) => {
+        res.render('me/mypage_t')
+}
+
+exports.account = (req, res) => {
+        res.render('me/account')
+}
+
+exports.delivery = (req, res) => {
+        res.render('me/delivery')
+}
+
+exports.order = (req, res) => {
+        res.render('me/order')
+}
+
+exports.pay = (req, res) => {
+        res.render('me/pay')
+}
+
+exports.myorder = (req, res) => {
+        res.render('me/myorder')
+}
+
+exports.confirm = (req, res) => {
+        res.render('me/confirm')
+}

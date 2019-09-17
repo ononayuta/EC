@@ -1,0 +1,51 @@
+
+<% include ../../layout/admin_header %>
+
+<h1>売上一覧画面</h1>
+<div class="btn_wrap">
+  <a href="/admin/sales/new" class="btn btn-primary right_btn">売上新規登録</a>
+</div>
+<div class="table-responsive-vertical shadow-z-1">
+  <table id="table" class="table table-hover table-mc-light-blue">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>売上日</th>
+        <th>伝票番号</th>
+        <th>売上詳細</th>
+        <th>顧客名</th>
+        <th>納入日</th>
+        <th>売上状況</th>
+        <th>編集</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="id">1</td>
+        <td class="sales_date">
+          2019/08/20 11:35
+        </td>
+        <td class="slip_number">
+          000111222333
+        </td>
+        <td>
+            <a href="/admin/sales/show/1">タピオカA</a>
+        </td>
+        <td class="user_name">
+          テストユーザ
+        </td>
+        <td>
+          2019/08/21
+        </td>
+        <td class="sales_status">
+          販売済み
+        </td>
+        <td class="edit">
+          <a href="/admin/sales/1/edit">編集</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<% include ../../layout/admin_footer %>

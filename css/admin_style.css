@@ -128,12 +128,56 @@ table{
   width: 100%;
 }
 
+caption{
+  caption-side: top;
+}
+
+.material-icons {
+  vertical-align: bottom;
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
 .product_wrap th,
 .product_wrap td,
 .product_card th,
 .product_card td{
   padding: 15px;
   text-align: left;
+}
+
+.tax_row th,
+.tax_row td,
+.total_row th,
+.total_row td,
+.subtotal th,
+.subtotal td {
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+}
+
+.total_row{
+  border-bottom: 1px solid #dee2e6;
+}
+
+.salse_input_wrap{
+  width: 100%;
+  margin: 2% 0 0%;
+  padding: 1rem 2rem 0;
+}
+
+.salse_input_wrap .table-hover tbody tr:hover{
+  background-color: #fff;
+}
+
+.price input{
+  text-align: right;
+}
+
+.quantity input{
+  text-align: center;
 }
 
 .shadow-z-1 {
@@ -191,6 +235,12 @@ input:valid ~ label {
 input[type="text"][disabled]{
   background:#DCDCDC;
   cursor:not-allowed; /* 禁止カーソル */
+}
+
+.input_disabled{
+  top: -20px;
+  font-size: 14px;
+  color: #f06292;
 }
 
 /* BOTTOM BARS ================================= */
