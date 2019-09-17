@@ -1,7 +1,9 @@
 <% include ../header %>
 <div class="account-body">
   <section class="section">
+    <h1>会員情報変更画面</h1>
     <div class="basic">
+    <form method="POST" action="/mypage/account/?_method=PUT">
     <% user_a.forEach(user_a => { %>
       <div class="basic-title">
         <h2>基本情報</h2>
@@ -9,19 +11,19 @@
           <tbody>
             <tr>
               <th>お名前</th>
-              <td><%= user_a.name %></td>
+              <td><input type='text' name='name' value='<%= user_a.name %>'></td>
             </tr>
             <tr>
               <th>郵便番号</th>
-              <td><%= user_a.postal_code %></td>
+              <td><input type='number' name='post_number' value='<%= user_a.postal_code %>'></td>
             </tr>
             <tr>
                 <th>住所</th>
-                <td><%= user_a.address %></td>
+                <td><input type='text' name='address' value='<%= user_a.address %>'></td>
               </tr>
             <tr>
               <th>電話番号</th>
-              <td><%= user_a.phone_number %></td>
+              <td><input type='number' name='phone_number' value='<%= user_a.phone_number %>'></td>
             </tr>
           </tbody>
         </table>
@@ -32,14 +34,17 @@
           <tbody>
             <tr>
               <th>メールアドレス</th>
-              <td><%= user_a.email %></td>
+              <td><input type='text' name='email' value='<%= user_a.email %>'></td>
           </tbody>
         </table>
       </div>
       <div class="edit-btn">
-        <a class="edit-btn-img" href="/mypage/account/edit">会員情報を変更する</a> 
+        <input type="submit" value = '保存' class = 'edit-btn'>
       </div>  
       <% }); %>
+                <!-- CSRF対策-->
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    </form>
     </div>
   </section>
 </div>

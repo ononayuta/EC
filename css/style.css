@@ -382,7 +382,8 @@ nobr.price {
   border-collapse: separate;
   border-spacing: 1px;
   border-radius: 6px;
-
+  margin: 10px auto;
+  padding: 10px;
 
 
 }
