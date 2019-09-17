@@ -14,40 +14,33 @@
 <body>
   <div class="container">
     <header id="header">
-      <div class="logo-btn">
-        <a href="/">
-          <img src="../img/front/index/logo.png">
-        </a>
-      </div>
+      <a href="/" class='logo'>
+        <img src="../img/front/index/logo.png">
+      </a>
       <form class="search">
         <input type="search" name="search-box" placeholder="何をお探しですか？">
         <input type="submit" name="submit" value="検索">
       </form>
       <div class="aicon">
-        <div class="login-body">
-          <a href="/signin" class="login-btn">ログイン</a>
-        </div>
-        <div class="login-body">
-          <a href="会員登録画面" class="login-btn">会員登録</a>
-        </div>
+        <a href="/signin" class="login-btn">ログイン</a>
+        <a href="会員登録画面" class="login-btn">会員登録</a>
 <!-- divで囲ったほうがいい？ ここから-->
         <a href="/mypage/top" class="menu">
-          <img src="../img/front/index/shopping_cart.png" class="menu-img">
+          <img src="../img/icon/home.svg" class="menu-img home_svg">
         </a>
         <a href="/cart">
-          <img src="../img/front/index/shopping_cart.png" class="menu-img">
+          <img src="../img/icon/shopping_cart.svg" class="menu-img">
         </a>
 <!-- divで囲ったほうがいい？ ここまで-->
       </div>
-      
-    
+
       <ul class="header-dropmenu">
         <li>
           <a href="#">すべてのメニュー</a>
           <ul>
             <li><a href="#">すべてのメニュー</a></li>
           </ul>
-        </li>  
+        </li>
         <li>
           <a href="#">ミルクティ</a>
           <ul>
